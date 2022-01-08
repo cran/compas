@@ -1,3 +1,4 @@
+#define STRICT_R_HEADERS
 #include <Rcpp.h>
 #include <math.h> 
 #include <iostream>
@@ -95,9 +96,9 @@ double torsion(NumericVector a, NumericVector b, NumericVector c, NumericVector 
     
     if (s < 0.0) ap = -ap;
     
-    ap = (ap > 0.0) ? PI-ap : -(PI+ap);
+    ap = (ap > 0.0) ? M_PI-ap : -(M_PI+ap);
     
-    return((ap/PI)*180);
+    return((ap/M_PI)*180);
 }
 
 

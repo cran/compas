@@ -6,20 +6,6 @@
 
 using namespace Rcpp;
 
-// calCo
-NumericVector calCo(NumericMatrix prev_atoms, double length, double bAngle, double tAngle);
-RcppExport SEXP _compas_calCo(SEXP prev_atomsSEXP, SEXP lengthSEXP, SEXP bAngleSEXP, SEXP tAngleSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< NumericMatrix >::type prev_atoms(prev_atomsSEXP);
-    Rcpp::traits::input_parameter< double >::type length(lengthSEXP);
-    Rcpp::traits::input_parameter< double >::type bAngle(bAngleSEXP);
-    Rcpp::traits::input_parameter< double >::type tAngle(tAngleSEXP);
-    rcpp_result_gen = Rcpp::wrap(calCo(prev_atoms, length, bAngle, tAngle));
-    return rcpp_result_gen;
-END_RCPP
-}
 // dfeval
 double dfeval(DataFrame chain, NumericVector atypes, NumericMatrix& etable);
 RcppExport SEXP _compas_dfeval(SEXP chainSEXP, SEXP atypesSEXP, SEXP etableSEXP) {
@@ -57,6 +43,20 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// calCo
+NumericVector calCo(NumericMatrix prev_atoms, double length, double bAngle, double tAngle);
+RcppExport SEXP _compas_calCo(SEXP prev_atomsSEXP, SEXP lengthSEXP, SEXP bAngleSEXP, SEXP tAngleSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< NumericMatrix >::type prev_atoms(prev_atomsSEXP);
+    Rcpp::traits::input_parameter< double >::type length(lengthSEXP);
+    Rcpp::traits::input_parameter< double >::type bAngle(bAngleSEXP);
+    Rcpp::traits::input_parameter< double >::type tAngle(tAngleSEXP);
+    rcpp_result_gen = Rcpp::wrap(calCo(prev_atoms, length, bAngle, tAngle));
+    return rcpp_result_gen;
+END_RCPP
+}
 // torsion
 double torsion(NumericVector a, NumericVector b, NumericVector c, NumericVector d);
 RcppExport SEXP _compas_torsion(SEXP aSEXP, SEXP bSEXP, SEXP cSEXP, SEXP dSEXP) {
@@ -73,10 +73,10 @@ END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_compas_calCo", (DL_FUNC) &_compas_calCo, 4},
     {"_compas_dfeval", (DL_FUNC) &_compas_dfeval, 3},
     {"_compas_RMSD", (DL_FUNC) &_compas_RMSD, 2},
     {"_compas_LRMSD", (DL_FUNC) &_compas_LRMSD, 2},
+    {"_compas_calCo", (DL_FUNC) &_compas_calCo, 4},
     {"_compas_torsion", (DL_FUNC) &_compas_torsion, 4},
     {NULL, NULL, 0}
 };

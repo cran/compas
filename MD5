@@ -1,6 +1,6 @@
-c0ee97070a4df76be0b93e1f4617410d *DESCRIPTION
+8349c5f45296341acaaa6582270dbb18 *DESCRIPTION
 0e4b53be0ed7ce49c9c466ce267b8a19 *NAMESPACE
-aaffcef43625db6578144db7f4d46e48 *R/RcppExports.R
+eed6fe0976e2447f205ff98e2be721cd *R/RcppExports.R
 3f60b2aded726a9ceb357d8932b96fd4 *R/calscco.R
 faa5265fe3854073ad9f77c5a18e0c86 *R/compas.R
 2bbe09435b661be99da3101413dd3c69 *R/data.R
@@ -25,6 +25,6 @@ e542f9aa50de19a7882ce8cf331c0d0e *src/EnergyEval.cpp
 b4f0b014ec53404e843dbc718fabf57e *src/Makevars
 b4f0b014ec53404e843dbc718fabf57e *src/Makevars.win
 e3ad5f8bc1769cc3d36560a3be71808d *src/RMSD.cpp
-f6871ea17295c0347652038fd0c053b1 *src/RcppExports.cpp
-bc0dbfd97ec7eedacda40edf7a0ec26b *src/calco.cpp
-60de333a8ac8c9ac8ecb0fa6247d253e *src/torsion.cpp
+f202ab299dec042da111a8effe915dd0 *src/RcppExports.cpp
+e9f3fa8a9447cc67a4b4ed42cc245422 *src/calco.cpp
+2349f5d803c100019a1d31a7ed04f2ba *src/torsion.cpp
